@@ -883,4 +883,102 @@
 
                 <div class="project-card">
                     <h3>☁️ Serverless Architecture</h3>
-                    <p>Implemented serverless solutions for
+                    <p>Implemented serverless solutions for enterprise clients using AWS Lambda and related services.</p>
+                    <div class="project-impact">
+                        <strong>Impact:</strong> Reduced operational overhead by 60% while improving scalability
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <h2>Key Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <span class="achievement-number">60%</span>
+                    <p class="achievement-text">Reduction in operational overhead</p>
+                </div>
+                <div class="achievement-card">
+                    <span class="achievement-number">90.9%</span>
+                    <p class="achievement-text">DDoS mitigation success rate</p>
+                </div>
+                <div class="achievement-card">
+                    <span class="achievement-number">75%</span>
+                    <p class="achievement-text">Client adoption rate</p>
+                </div>
+                <div class="achievement-card">
+                    <span class="achievement-number">40%</span>
+                    <p class="achievement-text">PNOV improvement</p>
+                </div>
+                <div class="achievement-card">
+                    <span class="achievement-number">500</span>
+                    <p class="achievement-text">Calls handled in one day</p>
+                </div>
+                <div class="achievement-card">
+                    <span class="achievement-number">5</span>
+                    <p class="achievement-text">Countries trained as DSL Champion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem;">
+                Interested in discussing cloud architecture, AWS solutions, or potential collaboration? 
+                I'd love to hear from you.
+            </p>
+            <div class="cta-buttons">
+                <a href="mailto:Jobs.canister440@passmail.net" class="btn btn-primary">Send Email</a>
+                <a href="https://www.linkedin.com/in/ioana-pavlov-4a83b940" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ioana Pavlov. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Built with passion for cloud architecture and innovation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.experience-item, .project-card, .skill-category, .achievement-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
